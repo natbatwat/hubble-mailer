@@ -31,3 +31,27 @@ function processTemplate(data) {
 
     return deferred.promise;
 }
+function sendEmail(address) {
+
+    var deferred = Q.defer();
+
+    var mailOptions = {
+        from: '"Hubble HQ" <hubblehq@mailinator.com>',
+        to: address,
+        subject: 'Have your tenants moved in?',
+        text: {path: 'templates/hostReminder.txt'},
+        html: {path: 'compiledEmail.html'}
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+        if(error) {
+            return console.log(error);
+        }
+        console.log('Mail sent to:');
+        console.log(info.envelope);
+
+        deferred.resolve();
+    });
+
+    return deferred.promise;
+}
