@@ -1,5 +1,6 @@
 var iron_worker = require('iron_worker');
 var iron_mq = require('iron_mq');
+var env = require('node-env-file');
 var nodemailer = require('nodemailer');
 
 var worker = new iron_worker.Client();
