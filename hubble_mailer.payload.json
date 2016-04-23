@@ -87,7 +87,27 @@
             "name": "Alphabeta Building",
             "host": {
                 "id": 4321,
-                "name": "Joseph Junior Adenuga"
+                "name": "Joseph Junior Adenuga",
+                "email": "natalielohht@gmail.com"
+            }
+        },
+        "status": "unknown",
+        "viewingDate": "11/04/2016"
+    },
+    {
+        "id": 1239,
+        "tenant": {
+            "id": 2022,
+            "name": "Natalie Loh",
+            "company": "Crowdbeats"
+        },
+        "office": {
+            "id": 101,
+            "name": "Mana Technologies",
+            "host": {
+                "id": 4321,
+                "name": "Mindy Chua",
+                "email": "hi@natalieloh.com"
             }
         },
         "status": "unknown",
