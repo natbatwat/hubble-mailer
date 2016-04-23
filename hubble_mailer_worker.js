@@ -11,6 +11,15 @@ var worker = new iron_worker.Client();
 var imq = new iron_mq.Client({token: "MY_TOKEN", project_id: "MY_PROJECT_ID", queue_name: "MY_QUEUE"})
 console.log("Hello", iron_worker.params()[0]['id'], "!");
 var count = 0;
+
+fs.readFile('hubble_mailer.payload.json', 'utf-8', function(error, source) {
+    if (error) return console.log('ERROR READING FILE' + err);
+    var data = JSON.parse(source);
+
+    getRecepientData(data);
+
+});
+
 function getRecepientData(data) {
     if (count >= data.length) {
         return;
