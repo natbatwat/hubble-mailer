@@ -1,0 +1,2 @@
+runtime 'node'
+exec 'hubble_mailer_worker.js'
