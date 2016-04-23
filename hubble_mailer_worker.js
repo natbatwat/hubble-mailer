@@ -10,6 +10,10 @@ var Q = require('q');
 var worker = new iron_worker.Client();
 var imq = new iron_mq.Client({token: "MY_TOKEN", project_id: "MY_PROJECT_ID", queue_name: "MY_QUEUE"})
 console.log("Hello", iron_worker.params()[0]['id'], "!");
+var transporter = nodemailer.createTransport(
+    'smtps://' + process.env.GMAIL_ADDRESS + ':' + process.env.GMAIL_PASSWORD + '@smtp.gmail.com'
+);
+
 function processTemplate(data) {
 
     var deferred = Q.defer();
@@ -31,6 +35,7 @@ function processTemplate(data) {
 
     return deferred.promise;
 }
+
 function sendEmail(address) {
 
     var deferred = Q.defer();
