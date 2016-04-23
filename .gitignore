@@ -4,3 +4,6 @@ npm-debug.log
 
 ### Zipped Files for Upload ###
 *.zip
+
+## Environment Variable File##
+.env
