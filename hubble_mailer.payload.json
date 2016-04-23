@@ -11,7 +11,8 @@
             "name": "Alphabeta Building",
             "host": {
                 "id": 4321,
-                "name": "Joseph Junior Adenuga"
+                "name": "Joseph Junior Adenuga",
+                "email": "joseph@mailinator.com"
             }
         },
         "status": "unknown",
@@ -29,7 +30,8 @@
             "name": "WeWork Spitalfields",
             "host": {
                 "id": 4322,
-                "name": "Melesha O'Garro"
+                "name": "Melesha O'Garro",
+                "email": "melesha@mailinator.com"
             }
         },
         "status": "movedIn",
@@ -47,7 +49,8 @@
             "name": "WeWork Spitalfields",
             "host": {
                 "id": 4322,
-                "name": "Melesha O'Garro"
+                "name": "Melesha O'Garro",
+                "email": "melesha@mailinator.com"
             }
         },
         "status": "passed",
@@ -65,7 +68,8 @@
             "name": "Tea Building",
             "host": {
                 "id": 4323,
-                "name": "Michael Omari"
+                "name": "Michael Omari",
+                "email": "michael@mailinator.com"
             }
         },
         "status": "unknown",
