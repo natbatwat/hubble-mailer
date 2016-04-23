@@ -7,3 +7,6 @@ npm-debug.log
 
 ## Environment Variable File##
 .env
+
+## Compiled Emails ##
+compiledEmail.html
