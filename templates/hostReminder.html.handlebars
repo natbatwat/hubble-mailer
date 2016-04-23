@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hubble: Host Reminder</title>
+</head>
+<body bgcolor="#F7F7F5" style="font-family: 'Helvetica', 'Arial', sans-serif; background-color: #EBE0DF; text-align: center;">
+    
+    <img style="margin-top: 20px;" width="80" src="https://hubble.imgix.net/images/site/logo-cropped.png" alt="Hubble">
+
+    <table bgcolor="#FFFFFF" bordercolor="#D8D3DB" style="width: 95%; max-width: 800px; border-radius: 4px; border-width: 1.5px; border-color: #D8D3DB; border-style: solid; margin: 20px auto; padding: 15px; table-layout: fixed; color: #5D5A5A; font-size: 16.5px;">
+        <!-- TITLE -->
+        <tr>
+            <td style="margin:auto; text-align: center;">
+                <h2>Hello {{office.host.name}},<br> a friendly reminder:</h2>
+            </td>
+        </tr>
+        
+        <!-- BODY -->
+        <tr>
+            <td>
+                <p align="center" style="text-align: center; width: 70%; margin: auto;">Has tenant {{tenant.name}} from {{tenant.company}} moved in to your offices at {{office.name}}?</p>
+                <p>If so, click the big purple button below to verify their visit! <br>We'll take care of the rest.</p>
+            </td>
+        </tr>
+        <!-- CTA BUTTON -->
+        <tr>
+            <td>
+                <a href="https://hubblehq.com/" align="center" style="display: block; text-decoration: none; padding: 15px 0; width: 80%; max-width: 280px; color: #FFFFFF; background-color: #8e3391; border-radius: 5.5px; margin: 20px auto; border: solid; border-color: #A53BA9; border-width: 1.5px;">
+                        <span style="margin: 0; font-size: 18px; font-weight: bold; letter-spacing: 1px;">THEY HAVE MOVED IN!</span>
+                </a>
+            </td>
+        </tr>
+
+        <!-- SIDE NOTE -->
+        <tr>
+            <td>
+                <p align="center" style="text-align: center; color:#A8A3A3;">If they have yet to visit you, ignore this email - we'll check in again soon!</p>
+            </td>
+        </tr>
+    </table>
+
+    <!-- FOOTER -->
+    <table style="width: 100%; max-width: 550px; padding: 20px 0; margin: auto; text-align: center; font-size: 13px;">
+        <tr>
+            <td>
+                <a href="https://www.facebook.com/spaciouscom"><img style="margin: 0 5px;" width="32" src="https://s3-eu-west-1.amazonaws.com/hubble/facebook.png" alt="Hubble Facebook"></a>
+                <a href="https://twitter.com/hubblehq"><img style="margin: 0 5px;" width="32" src="https://s3-eu-west-1.amazonaws.com/hubble/twitter.png" alt="Hubble Twitter"></a>
+                <a href="https://plus.google.com/114069569186147040378"><img style="margin: 0 5px;" width="32" src="https://s3-eu-west-1.amazonaws.com/hubble/google-plus.png" alt="Hubble Google+"></a>
+                <a href="https://www.linkedin.com/company/3519114"><img style="margin: 0 5px;" width="32" src="https://s3-eu-west-1.amazonaws.com/hubble/linkedin.png" alt="Hubble LinkedIn"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="color:#868080; font-size: 13px; margin-top: 20px;">Dedicated to finding the home your start up deserves.</p>
+                <p style="color:#868080; font-size: 13px;">Questions? <a style="text-decoration: none; color: #8e3391;" href="https://hubblehq.com/faq">Read our FAQ!</a></p>
+                <p style="color:#868080; font-size: 13px;">+44 (0) 20 3608 0215  |  <a style="text-decoration: none; color: #8e3391;" href="mailto:help@hubblehq.com">help@hubblehq.com</a></p>
+                <p style="color:#868080; font-size: 13px;">Made with love by Natalie Loh &#169;</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
