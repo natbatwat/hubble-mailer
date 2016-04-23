@@ -1,3 +1,7 @@
+## Setup
+1. Duplicate `.env.sample` file by running: `cp .env.sample .env`
+2. Replace sample variables in .env file with your own gmail login credentials
+
 ## Commands
 - [IronWorker CLI Docs](http://dev.iron.io/worker/reference/cli/)
 
@@ -12,6 +16,7 @@
 
 ### Uplaod Worker
 `zip -r hubble_mailer.zip .`
+
 `iron worker upload --zip hubble_mailer.zip --name hubble_mailer iron/node node hubble_mailer_worker.js`
 
 ### Queue Tasks
