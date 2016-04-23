@@ -1,6 +1,7 @@
 ## Setup
 1. Duplicate `.env.sample` file by running: `cp .env.sample .env`
 2. Replace sample variables in .env file with your own gmail login credentials
+3. Run `npm install`
 
 ## Commands
 - [IronWorker CLI Docs](http://dev.iron.io/worker/reference/cli/)
