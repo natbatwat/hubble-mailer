@@ -10,6 +10,28 @@ var Q = require('q');
 var worker = new iron_worker.Client();
 var imq = new iron_mq.Client({token: "MY_TOKEN", project_id: "MY_PROJECT_ID", queue_name: "MY_QUEUE"})
 console.log("Hello", iron_worker.params()[0]['id'], "!");
+var count = 0;
+function getRecepientData(data) {
+    if (count >= data.length) {
+        return;
+    } else {
+        var recepientData = data[count];
+        var recepientAddress = data[count]['office']['host']['email'];
+
+        console.log(recepientData);
+
+        processTemplate(recepientData)
+        .then(function(){
+            sendEmail(recepientAddress)
+            .then(function(){
+                count++;
+                getRecepientData(data);
+            });
+        });
+    }
+}
+
+
 var transporter = nodemailer.createTransport(
     'smtps://' + process.env.GMAIL_ADDRESS + ':' + process.env.GMAIL_PASSWORD + '@smtp.gmail.com'
 );
