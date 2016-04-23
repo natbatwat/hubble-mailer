@@ -1,4 +1,5 @@
 ## Commands
+- [IronWorker CLI Docs](http://dev.iron.io/worker/reference/cli/)
 
 `docker run --rm -it -v "$PWD":/worker -w /worker iron/node node hubble_mailer_worker.js`
 
