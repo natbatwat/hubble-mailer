@@ -40,19 +40,22 @@ function getRecepientData(data) {
         var recepientData = data[count];
         var recepientAddress = data[count]['office']['host']['email'];
 
-        console.log(recepientData);
-
-        processTemplate(recepientData)
-        .then(function(){
-            sendEmail(recepientAddress)
+        if(data[count]['status'] === "unknown") {
+            processTemplate(recepientData)
             .then(function(){
-                count++;
-                getRecepientData(data);
+                sendEmail(recepientAddress)
+                .then(function(){
+                    count++;
+                    getRecepientData(data);
+                });
             });
-        });
+        } else {
+            count++;
+            getRecepientData(data);
+        }
+
     }
 }
-
 
 var transporter = nodemailer.createTransport(
     'smtps://' + process.env.GMAIL_ADDRESS + ':' + process.env.GMAIL_PASSWORD + '@smtp.gmail.com'
