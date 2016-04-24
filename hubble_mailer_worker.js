@@ -18,6 +18,7 @@ var nodemailer = require('nodemailer');
 var handlebars = require("handlebars");
 var fs = require('fs');
 var Q = require('q');
+var csv = require("fast-csv");
 
 var worker = new iron_worker.Client();
 var imq = new iron_mq.Client({token: "MY_TOKEN", project_id: "MY_PROJECT_ID", queue_name: "MY_QUEUE"})
@@ -25,6 +26,7 @@ console.log("Hello", iron_worker.params()[0]['id'], "!");
 env(__dirname + '/.env'); // .env path
 
 var count = 0;
+var logData = [];
 
 fs.readFile('hubble_mailer.payload.json', 'utf-8', function(error, source) {
     if (error) return console.log('ERROR READING FILE' + err);
@@ -36,6 +38,7 @@ fs.readFile('hubble_mailer.payload.json', 'utf-8', function(error, source) {
 
 function getRecepientData(data) {
     if (count >= data.length) {
+        generateCSV(logData);
         return;
     } else {
         var recepientData = data[count];
@@ -113,13 +116,43 @@ function sendEmail(address) {
 
     transporter.sendMail(mailOptions, function(error, info){
         if(error) {
-            return console.log(error);
+            console.log('Mail send info: ' + info);
+            console.log('Mail send error: ' + error);
+            return;
         }
-        console.log('Mail sent to:');
-        console.log(info.envelope);
+
+        var emailResponse = [];
+
+        emailResponse.push(info.envelope.to[0]);
+        emailResponse.push(info.response);
+        if(info.accepted.length > 0) {
+            emailResponse.push('SUCCESS');
+        } else {
+            emailResponse.push("NIL");
+        }
+        if(info.rejected.length > 0) {
+            emailResponse.push('REJECTED');
+        } else {
+            emailResponse.push("NIL");
+        }
+        if(info.pending) {
+            emailResponse.push(info.pending[0]);
+        } else {
+            emailResponse.push("NIL");
+        }
+
+        logData.push(emailResponse);
 
         deferred.resolve();
     });
 
     return deferred.promise;
+}
+
+function generateCSV(data) {
+    csv
+       .writeToPath("mailer-logs.csv", data, {headers: false})
+       .on("finish", function(){
+           console.log("Finished writing CSV!");
+       });
 }
