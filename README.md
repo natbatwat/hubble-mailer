@@ -28,3 +28,5 @@
 
 ### Get Task Logs
 `iron worker log [YOUR_TASK_ID]`
+
+## Email Template Cross-Provider Testing
