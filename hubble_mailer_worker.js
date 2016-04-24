@@ -20,21 +20,23 @@ var fs = require('fs');
 var Q = require('q');
 var csv = require("fast-csv");
 
-var worker = new iron_worker.Client();
-var imq = new iron_mq.Client({token: "MY_TOKEN", project_id: "MY_PROJECT_ID", queue_name: "MY_QUEUE"})
-console.log("Hello", iron_worker.params()[0]['id'], "!");
 env(__dirname + '/.env'); // .env path
 
 var count = 0;
 var logData = [];
 
-fs.readFile('hubble_mailer.payload.json', 'utf-8', function(error, source) {
-    if (error) return console.log('ERROR READING FILE' + err);
-    var data = JSON.parse(source);
+(function(){
+    'use strict';
 
-    getRecepientData(data);
+    fs.readFile('hubble_mailer.payload.json', 'utf-8', function(error, source) {
+        if (error) return console.log('ERROR READING FILE' + err);
+        var data = JSON.parse(source);
 
-});
+        getRecepientData(data);
+
+    });
+
+}());
 
 function getRecepientData(data) {
     if (count >= data.length) {
@@ -60,10 +62,6 @@ function getRecepientData(data) {
 
     }
 }
-
-var transporter = nodemailer.createTransport(
-    'smtps://' + process.env.GMAIL_ADDRESS + ':' + process.env.GMAIL_PASSWORD + '@smtp.gmail.com'
-);
 
 function processTemplate(data) {
 
@@ -105,6 +103,10 @@ function processTemplate(data) {
 function sendEmail(address) {
 
     var deferred = Q.defer();
+
+    var transporter = nodemailer.createTransport(
+        'smtps://' + process.env.GMAIL_ADDRESS + ':' + process.env.GMAIL_PASSWORD + '@smtp.gmail.com'
+    );
 
     var mailOptions = {
         from: '"Hubble HQ" <hubblehq@mailinator.com>',
