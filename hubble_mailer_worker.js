@@ -73,7 +73,22 @@ function processTemplate(data) {
             noEscape: true
         });
 
-        fs.writeFile('compiledEmail.html', template(data), function (err) {
+        fs.writeFile('compiledRichEmail.html', template(data), function (err) {
+          if (err) return console.log('ERROR WRITING FILE' + err);
+        });
+
+        deferred.resolve();
+
+    });
+
+    fs.readFile('templates/hostReminder.txt.handlebars', 'utf-8', function(error, source){
+        if (error) return console.log('ERROR READING FILE' + err);
+        
+        var template = handlebars.compile(source, {
+            noEscape: true
+        });
+
+        fs.writeFile('compiledPlainEmail.txt', template(data), function (err) {
           if (err) return console.log('ERROR WRITING FILE' + err);
         });
 
@@ -91,9 +106,9 @@ function sendEmail(address) {
     var mailOptions = {
         from: '"Hubble HQ" <hubblehq@mailinator.com>',
         to: address,
-        subject: 'Have your tenants moved in?',
-        text: {path: 'templates/hostReminder.txt'},
-        html: {path: 'compiledEmail.html'}
+        subject: 'Have your tenants moved in? 🏡',
+        text: {path: 'compiledPlainEmail.txt'},
+        html: {path: 'compiledRichEmail.html'}
     };
 
     transporter.sendMail(mailOptions, function(error, info){
