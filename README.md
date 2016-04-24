@@ -31,6 +31,8 @@
 
 ## Email Template Cross-Provider Testing
 
+[Putsmail](https://www.putsmail.com/) was used to test the email templates for cross-provider compatibility & responsiveness
+
 #### Gmail Desktop
 <img src="https://cloud.githubusercontent.com/assets/9147731/14765677/42fcf95c-0a1e-11e6-9a50-e5b0e376f6cf.png" alt="">
 
