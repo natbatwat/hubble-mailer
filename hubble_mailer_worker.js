@@ -1,6 +1,7 @@
 /*
 
 Hubble Mailer Worker
+v1.0.2
 Natalie Loh (@natbatwat) - 23 April 2016
 
 This Node.js worker reads a JSON object of tenants and hosts, loops through them and decides which hosts requires reminder emails. It then compiles a standard Handlebar.js template with dynamic data and sends off emails using Nodemailer.
