@@ -30,15 +30,22 @@
 `iron worker log [YOUR_TASK_ID]`
 
 ## Email Template Cross-Provider Testing
-<img src="https://cloud.githubusercontent.com/assets/9147731/14765640/1d207962-0a1d-11e6-97db-7114b8b1d61c.PNG" width="150" alt="">
-<img src="https://cloud.githubusercontent.com/assets/9147731/14765641/1d4f1bd2-0a1d-11e6-923b-74575706b6e8.PNG" width="150" alt="">
-<img src="https://cloud.githubusercontent.com/assets/9147731/14765643/1d6dec74-0a1d-11e6-8d70-fc4fe5a1c140.PNG" width="150" alt="">
-<img src="https://cloud.githubusercontent.com/assets/9147731/14765642/1d6dd36a-0a1d-11e6-83fa-13e32ff6bbdb.PNG" width="150" alt="">
-<img src="https://cloud.githubusercontent.com/assets/9147731/14765645/1d798a52-0a1d-11e6-92d3-e51c39a4a6e4.PNG" width="150" alt="">
-<img src="https://cloud.githubusercontent.com/assets/9147731/14765644/1d78ea16-0a1d-11e6-8d97-15dc3067069e.PNG" width="150" alt="">
-<img src="https://cloud.githubusercontent.com/assets/9147731/14765647/1d856c1e-0a1d-11e6-98ba-ead394fdd285.PNG" width="150" alt="">
-<img src="https://cloud.githubusercontent.com/assets/9147731/14765646/1d82dd78-0a1d-11e6-89af-18c92f8e5898.PNG" width="150" alt="">
-<img src="https://cloud.githubusercontent.com/assets/9147731/14765648/1d98ec44-0a1d-11e6-8772-76cf39cc4df9.PNG" width="150" alt="">
-<img src="https://cloud.githubusercontent.com/assets/9147731/14765649/1d99d76c-0a1d-11e6-973d-b23bcda9b66b.PNG" width="150" alt="">
-<img src="https://cloud.githubusercontent.com/assets/9147731/14765651/1da536d4-0a1d-11e6-9188-ad3034bc2fa7.PNG" width="150" alt="">
-<img src="https://cloud.githubusercontent.com/assets/9147731/14765650/1da4f142-0a1d-11e6-9d8e-0646a60b51b8.PNG" width="150" alt="">
+#### Yahoo App (iOS)
+<img src="https://cloud.githubusercontent.com/assets/9147731/14765640/1d207962-0a1d-11e6-97db-7114b8b1d61c.PNG" width="180" alt="">
+<img src="https://cloud.githubusercontent.com/assets/9147731/14765641/1d4f1bd2-0a1d-11e6-923b-74575706b6e8.PNG" width="180" alt="">
+<img src="https://cloud.githubusercontent.com/assets/9147731/14765643/1d6dec74-0a1d-11e6-8d70-fc4fe5a1c140.PNG" width="180" alt="">
+
+#### Outlook App (iOS)
+<img src="https://cloud.githubusercontent.com/assets/9147731/14765642/1d6dd36a-0a1d-11e6-83fa-13e32ff6bbdb.PNG" width="180" alt="">
+<img src="https://cloud.githubusercontent.com/assets/9147731/14765645/1d798a52-0a1d-11e6-92d3-e51c39a4a6e4.PNG" width="180" alt="">
+<img src="https://cloud.githubusercontent.com/assets/9147731/14765644/1d78ea16-0a1d-11e6-8d97-15dc3067069e.PNG" width="180" alt="">
+
+#### Gmail App (iOS)
+<img src="https://cloud.githubusercontent.com/assets/9147731/14765647/1d856c1e-0a1d-11e6-98ba-ead394fdd285.PNG" width="180" alt="">
+<img src="https://cloud.githubusercontent.com/assets/9147731/14765646/1d82dd78-0a1d-11e6-89af-18c92f8e5898.PNG" width="180" alt="">
+<img src="https://cloud.githubusercontent.com/assets/9147731/14765648/1d98ec44-0a1d-11e6-8772-76cf39cc4df9.PNG" width="180" alt="">
+
+#### CloudMagic App (iOS)
+<img src="https://cloud.githubusercontent.com/assets/9147731/14765649/1d99d76c-0a1d-11e6-973d-b23bcda9b66b.PNG" width="180" alt="">
+<img src="https://cloud.githubusercontent.com/assets/9147731/14765651/1da536d4-0a1d-11e6-9188-ad3034bc2fa7.PNG" width="180" alt="">
+<img src="https://cloud.githubusercontent.com/assets/9147731/14765650/1da4f142-0a1d-11e6-9d8e-0646a60b51b8.PNG" width="180" alt="">
