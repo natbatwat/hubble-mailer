@@ -9,4 +9,5 @@ npm-debug.log
 .env
 
 ## Compiled Emails ##
-compiledEmail.html
+compiledRichEmail.html
+compiledPlainEmail.txt
