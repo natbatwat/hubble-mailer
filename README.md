@@ -63,3 +63,6 @@ After allowing images:<img src="https://cloud.githubusercontent.com/assets/91477
 <img src="https://cloud.githubusercontent.com/assets/9147731/14765649/1d99d76c-0a1d-11e6-973d-b23bcda9b66b.PNG" width="180" alt="">
 <img src="https://cloud.githubusercontent.com/assets/9147731/14765651/1da536d4-0a1d-11e6-9188-ad3034bc2fa7.PNG" width="180" alt="">
 <img src="https://cloud.githubusercontent.com/assets/9147731/14765650/1da4f142-0a1d-11e6-9d8e-0646a60b51b8.PNG" width="180" alt="">
+
+####Plain Text Fallback
+<img src="https://cloud.githubusercontent.com/assets/9147731/14765701/9e0c91bc-0a1f-11e6-8f3f-5d540b1630cf.png" alt="">
