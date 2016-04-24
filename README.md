@@ -1,6 +1,8 @@
+# Hubble Email IronWorker
+
 ## Setup
 1. Duplicate `.env.sample` file by running: `cp .env.sample .env`
-2. Replace sample variables in .env file with your own gmail login credentials
+2. Replace sample variables in .env file with your own email login credentials (only tested with Gmail)
 3. Run `npm install`
 
 ## Commands
@@ -66,3 +68,19 @@ After allowing images:<img src="https://cloud.githubusercontent.com/assets/91477
 
 ####Plain Text Fallback
 <img src="https://cloud.githubusercontent.com/assets/9147731/14765701/9e0c91bc-0a1f-11e6-8f3f-5d540b1630cf.png" alt="">
+
+
+### To Do 
+- Write tests.
+- Do a POST request to update host object with successfully-sent email timestamp 
+- If an email bounces back/ fails after 2 retries, send an email with logs to Hubble customer care representative 
+- If a tenant does not move in X days after viewing OR if more than 3 reminder emails have been sent, add a flag to host object for Hubble customer care to contact directly (call), or change to a different email template (perhaps a "How could we help?" email instead).
+- Auto-generate and attach invoices/ other relevant tenant information to email (perhaps an e-brochure?). A "What happens after your tenant moves in?" sort-of-thing. 
+- Analyzing email-open and CTA click-through rates and possibly do A/B testing on email copy
+- Tenants who have scheduled viewings but haven't moved in after X weeks should be sent EDM with other similar office options and or promotions (e.g. standing table offers)
+
+### Other Possible EDMs (to re-engage Tenants)
+- New office listings similar to historical search parameters 
+
+### Other Possible EDMs (to re-engage Hosts)
+- Bi-weekly listing statistics (e.g. unique views/ number of scheduled visits). If a listing is doing poorly, possibly send a "How to improve your listing" EDM with other B2B marketing materials 
